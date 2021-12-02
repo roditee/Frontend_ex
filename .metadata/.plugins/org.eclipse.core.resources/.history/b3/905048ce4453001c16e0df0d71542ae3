@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>비디오 태그</title>
+	</head>
+	<body>
+		<div>
+			<video poster="media/poster.jpg" width="640" height="360" controls>
+				<source src="media/Wildlife.mp4" type="video/mp4"></source>
+				
+			</video>
+			
+			
+			
+			
+			<video poster="media/poster.jpg" width="640" height="360" controls>
+				<source src="media/Wildlife.mp4" type="video/mp4"></source>
+				
+				<track src="media/track.vtt" kind="captions" srclang="ko" label="Korean"></track>
+				<track src="media/track2.vtt" kind="captions" srclang="eng" label="English"></track>
+				<track src="media/track2.vtt" kind="captions" srclang="chn" label="Chinese"></track>
+				<track src="media/track2.vtt" kind="captions" srclang="jp" label="Japanese"></track>
+			</video>
+			
+			
+		</div>
+	</body>
+</html>

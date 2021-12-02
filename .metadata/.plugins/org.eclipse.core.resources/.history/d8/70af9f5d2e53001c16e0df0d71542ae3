@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>테이블 태그</title>
+	</head>
+	<body>
+		<table border="1">
+			<caption>테이블1</caption>
+			<thead align="center">
+			<tr><th>a</th><th>b</th><th>c</th><th>d</th></tr>
+			<tr><th>a1</th><th>b1</th><th>c1</th><th>d1</th></tr>
+			<tr><th>a2</th><th>b2</th><th>c2</th><th>d2</th></tr>
+			<tr><th>a3</th><th>b3</th><th>c3</th><th>d3</th></tr>
+			<tr><th>a4</th><th>b4</th><th>c4</th><th>d4</th></tr>
+		</table>
+	</body>
+</html>
