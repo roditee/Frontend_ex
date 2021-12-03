@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>회원가입</title>
+	</head>
+	<body>
+		<table border="1" width="600" align="center">
+			<tr><th>회원가입</th></tr>
+			<tr><td>
+				<table width="550">
+					<tr><td>성명</td><td><input type="text" name="name" size="10"></td></tr>
+					<tr><td>아이디</td><td><input type="text" name="id" size="10"><button>ID중복체크</button>(영문자+특수문자:6~10자)</td></tr>
+					<tr><td>비밀번호</td><td><input type="password" name="pw" size="10"></td></tr>
+					<tr><td>비밀번호 확인</td><td><input type="password" name="pwCheck" size="10"></td></tr>
+					<tr><td>생년월일</td><td><input type="text" name="pwCheck" size="4">년<select name="birthMonth">
+																							<option value="1">1</option>
+																							<option value="2">2</option>
+																							<option value="3">3</option>
+																							<option value="4">4</option>
+																							<option value="5">5</option>
+																							<option value="6">6</option>
+																							<option value="7">7</option>
+																							<option value="8">8</option>
+																							<option value="9">9</option>
+																							<option value="10">10</option>
+																							<option value="11">11</option>
+																							<option value="12">12</option></select>월
+																						<select name="birthDay">
+																							<option value="1">1</option>
+																							<option value="2">2</option>
+																							<option value="3">3</option>
+																							<option value="4">4</option>
+																							<option value="5">5</option>
+																							<option value="6">6</option>
+																							<option value="7">7</option>
+																							<option value="8">8</option>
+																							<option value="9">9</option>
+																							<option value="10">10</option>
+																							<option value="11">11</option>
+																							<option value="12">12</option>
+																							<option value="13">13</option>
+																							<option value="14">14</option>
+																							<option value="15">15</option>
+																							<option value="16">16</option>
+																							<option value="17">17</option>
+																							<option value="18">18</option>
+																							<option value="19">19</option>
+																							<option value="20">20</option>
+																							<option value="21">21</option>
+																							<option value="22">22</option>
+																							<option value="23">23</option>
+																							<option value="24">24</option>
+																							<option value="25">25</option>
+																							<option value="26">26</option>
+																							<option value="27">27</option>
+																							<option value="28">28</option>
+																							<option value="29">29</option>
+																							<option value="30">30</option>
+																							<option value="31">31</option></select>일
+																						<input type="radio" "name="b+" value="양력">양력
+																						<input type="radio" "name="b+" value="음력">음력
+																						</td>
+					<tr><td>전화번호</td><td><select name="Tel">
+											<option value="02">02</option>
+											<option value="063">063</option>
+											<option value="032">032</option>
+											<option value="031">031</option>
+										  </select>-<input type="text" name="tel2" size="4">-<input type="text" name="tel3" size="4"></td>
+					<tr><td>휴대폰번호</td><td><select name="Tel">
+											<option value="010">010</option>
+											<option value="011">011</option>
+										  </select>-<input type="text" name="phone2" size="4">-<input type="text" name="phone3" size="4"></td>
+					<tr><td rowspan="3">주소</td><td><input type="text" size="10"><button>우편번호찾기</button></td></tr>
+					<tr><td><input type="text" size="20"></td></tr>
+					<tr><td><input type="text" size="20">상세 주소 입력</td></tr>
+					<tr><td>성별</td><td>
+									<input type="radio" "name="gender" value="남">남
+									<input type="radio" "name="gender" value="여">여
+								</td></tr>
+					<tr><td>직업</td><td><select name="job">
+											<option value="프로그래머">프로그래머</option>
+											<option value="화가">화가</option>
+											<option value="의사">의사</option>
+											<option value="판사">판사</option>
+										</select></td></tr>
+					<tr><td>이메일</td><td><input type="text" size="6">@
+										<select>
+											<option value="네이버">naver.com</option>
+											<option value="다음">hanmail.net</option>
+										</select>
+								</td></tr>
+					<tr><td>이메일 수신 여부</td><td>
+												<input type="radio" "name="mail" value="yes">예
+												<input type="radio" "name="mail" value="no">아니오
+										</td></tr>
+					<tr><td>약관 동의 여부</td><td>
+										<input type="checkbox" "name="agreeYes" value="yes">동의
+										<input type="checkbox" "name="agreeNo" value="no">비동의
+									</td></tr>
+					<tr><td colspan="2" align="center">
+										<input type="submit" name="join" value="회원가입">
+										<input type="reset" name="reset" value="취소">
+									</td>
+				</table>
+			</td></tr>
+		</table>
+	</body>
+</html>

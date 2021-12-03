@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			#parent {
+				/* position 지정하지 않았음 */
+				width:200;
+				height:300px;
+				border:solid 5px #000000;
+				margin:50px 0 0 50px;
+			}
+			
+			#boxA, #boxB, #boxC {
+				width:80px;
+				height:80px;
+			}
+			
+			#boxA {background-color:#ff0000;}
+			#boxB {background-color:#00ff00;}
+			#boxC {background-color:#ffff00;}
+			
+			#boxB {
+				/* position:relative; */ /* static에 해당되는 원래 위치를 기준으로 20, 30 이동하여 배치 */
+				position:fixed;  /* 상위 요소에 위치를 지정하지 않았기 때문에 브라우저 화면(body)을 기준으로 배치 */
+				top:20px;
+				left:30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div id="boxA">A</div>
+			<div id="boxB">B</div>
+			<div id="boxC">C</div>
+		</div>
+	</body>
+</html>

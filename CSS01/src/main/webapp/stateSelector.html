@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>상태 선택자</title>
+		<style type="text/css">
+			/* input 태그가 사용 가능한 경우에 입력란 색상 지정  */
+			input:enabled { background-color:white;} 
+			
+			/* input 태그가 사용 불가능한 경우에 입력란 색상 지정  */
+			input:disabled { background-color:skyblue; }
+			
+			/* input 태그에 초점이 맞춰진 경웨 입력란 색상 지정  */
+			input:focus { background-color:orange; }	
+		</style>
+	</head>
+	<body>
+		<h2>사용 가능</h2>
+		비밀번호 : <input type="password" size="10">
+		
+		<h2>사용 불가능</h2>
+		아이디 : <input type="text" size="10" value="abcd" disabled>
+	</body>
+</html>

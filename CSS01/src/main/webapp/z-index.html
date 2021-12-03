@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>z-index 속성</title>
+		<style type="text/css">
+			#outBox {
+				margin:0 auto;  /* 브라우저 화면의 가운데 정렬 */
+				width:1020px;
+				position:relative;   /* absolute인 경우 가운데 정렬 안 됨 */
+			}
+			
+			#box1 {
+				position:absolute; /* 부모 박스 기준으로 배치 */
+				left:25px;
+				top:181px;
+				z-index:1;
+			}
+			
+			#box2 {
+				position:absolute; /* 부모 박스 기준으로 배치 */
+				left:187px;
+				top:155px;
+				z-index:2; 
+			}
+			
+			#box3 {
+				position:absolute; /* 부모 박스 기준으로 배치 */
+				left:369px;
+				top:129px;
+				z-index:5;
+			}
+			
+			#box4 {
+				position:absolute; /* 부모 박스 기준으로 배치 */
+				left:603px;
+				top:155px;
+				z-index:4;
+			}
+			
+			#box5 {
+				position:absolute; /* 부모 박스 기준으로 배치 */
+				left:795px;
+				top:181px;
+				z-index:3;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outBox">
+			<div id="box1"><img src="image/img1.png"></div>
+			<div id="box2"><img src="image/img2.png"></div>
+			<div id="box3"><img src="image/img3.png"></div>
+			<div id="box4"><img src="image/img4.png"></div>
+			<div id="box5"><img src="image/img5.png"></div>		
+		</div>
+	</body>
+</html>

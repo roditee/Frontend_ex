@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>nth-child 사용해서 테이블의 행 선택</title>
+		<style type="text/css">
+			#stdTable{
+				margin:0 auto;
+				border-collaspe:collapse;
+			}
+			
+			#stdTable th {
+				color:white;
+				background-color:blue;
+			}
+			
+			#stdTable th.name {width:100px;}
+			#stdTable th.email {width:200px;}
+			
+			#stdTable td { height:20px;}
+			
+			/* 짝수 행 선택 3n은 3의 배수*/
+			#stdTable tr:nth-child(2n) { background-color:green; }
+		</style>
+	</head>
+	<body>
+		<table id="stdTable" border="1">
+			<tr><th class="name">이름</th><th class="email">이메일</th></tr>
+			<tr><td></td><td></td></tr>
+			<tr><td></td><td></td></tr>
+			<tr><td></td><td></td></tr>
+			<tr><td></td><td></td></tr>
+			<tr><td></td><td></td></tr>
+			<tr><td></td><td></td></tr>
+			<tr><td></td><td></td></tr>
+			<tr><td></td><td></td></tr>
+			<tr><td></td><td></td></tr>
+			<tr><td></td><td></td></tr>
+		</table>
+	</body>
+</html>
