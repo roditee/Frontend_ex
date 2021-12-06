@@ -2360,3 +2360,27 @@ java.lang.IllegalArgumentException: release 16 is not found in the system
 
 !ENTRY org.eclipse.jst.server.tomcat.core 1 0 2021-12-06 17:17:03.289
 !MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.55\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2021-12-06 20:09:00.672
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.55\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2021-12-06 20:09:02.188
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.55\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2021-12-06 21:19:19.056
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.55\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2021-12-06 21:19:20.471
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.55\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2021-12-06 23:18:03.484
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.55\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2021-12-06 23:18:04.934
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.55\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 1 0 2021-12-06 23:18:41.503
+!MESSAGE Skipping argument '-Djava.endorsed.dirs=C:\apache-tomcat-9.0.55\endorsed' while launching Tomcat v9.0 Server at localhost
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2021-12-06 23:18:46.510
+!MESSAGE Several ports (8005, 8080) required by Tomcat v9.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).

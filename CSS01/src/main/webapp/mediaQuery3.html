@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>미디어 쿼리 : 스마트폰에서 스타일 해제</title>
-		<style>
-			* {margin:0; padding:0;}
+		<style type="text/css">
+			* { margin:0; padding:0;}
+			
 			body {
 				width:960px;
 				margin:0 auto;
@@ -12,20 +13,20 @@
 			}
 			
 			#menu {
-				width:700px;
+				width:260px;
 				float:left;
 			}
 			
 			#section {
 				width:700px;
-				float:right;
+				float:right; 
 			}
 			
-			@media screen and (max-width:767px) {
-				/* 스마트폰 사이즈에서는 전부 해제 */
-				body { width:auto; }
+			@media screen and (max-width:767px){
+				/* 스마트폰 사이즈에서는 전부 해제  */
+				body { width:auto;}
 				#menu { width:auto; float:none;}
-				#section { width:auto; float:none;}
+				#section { width:auto; float:none;}  
 			}
 		</style>
 	</head>
@@ -33,20 +34,23 @@
 		<div id="menu">
 			<ul>
 				<li>메뉴1</li>
-				<li>메뉴1</li>
-				<li>메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
 			</ul>
 		</div>
 		<div id="section">
 			<h1>반응형 웹</h1>
-			<p>미디어 쿼리 사용할 때 주의해야 할 사항 and 다음에 반드시 공백 있어야 함
-				min  접두사는 반드시 크기가 작은 순서대로 작성해야 하고, max 접두사를 사용할 때는 반드시 크기가 큰 순서대로 작성해야 함
-				순서가 중요한 이유은 min은 최소 또는 그 이상이른 뜻으로, 점차 커지는 것을 의미하고 max는 최대 또는 그 이하라는 뜻으로, 점차 작아지는 것을 의미하기 때문
-			</p>
-			<p>미디어 쿼리를 사용해서 브라우저 크기를 감지할 때, 어떤 대상을 기준으로 크기를 감지하는지 모르고 있는 경우가 대부분임
-이처럼 어떤 기준으로 크기를 감지해야 하는지 몰라 웹사이트 제작 시 혼란을 겪는 경우가 많음
-미디어쿼리를 사용해서 브라우저의 크기를 감지할 때는 HTML 문서 크기를 기준으로 감지한다는 것
-			</p>
+			<p>크기 감지 기준은 HTML 문서 크기라는 것
+					미디어 쿼리를 사용해서 브라우저 크기를 감지할 때, 어떤 대상을 기준으로 크기를 감지하는지 모르고 있는 경우가 대부분임
+					이처럼 어떤 기준으로 크기를 감지해야 하는지 몰라 웹사이트 제작 시 혼란을 겪는 경우가 많음
+					미디어쿼리를 사용해서 브라우저의 크기를 감지할 때는 HTML 문서 크기를 기준으로 감지한다는 것</p>
+			<p>브라우저의 비율에 따라 웹사이트의 구조가 늘어나거나 줄어드는 가변형 레이아웃에서
+					브라우저 너비에 맞게 이미지나 기타 멀티미디어 요소들을 가변적으로 작동하게 만들어줘야 함
+					width와 max-width 속성의 차이
+					width : 100%; 화면의 너비에 맞춰 크기 조정
+					max-width:100%;
+					화면의 너비에 맞춰 크기 조정
+					그러나 멀티미디어 요소 자신의 기본 크기 이상으로는 커지지 </p>
 		</div>
 	</body>
 </html>
