@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>가변적 멀티미디어 요소</title>
+		<style>
+			video{
+				/* width:100%; */
+				max-width:100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="video">
+			<video controls>
+				<source src="media/Wildlife.mp4" type="video/mp4"></source>
+				
+				<track src="media/track.vtt" kind="captions" srclang="ko" label="Korean"></track>
+				<track src="media/track2.vtt" kind="captions" srclang="eng" label="English"></track>
+				<track src="media/track2.vtt" kind="captions" srclang="chn" label="Chinese"></track>
+				<track src="media/track2.vtt" kind="captions" srclang="jp" label="Japanese"></track>
+			</video>
+		</div>
+	</body>
+</html>

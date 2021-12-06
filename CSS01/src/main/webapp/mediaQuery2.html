@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>미디어 쿼리 2 : orientation</title>
+		<style>
+			@media screen and (orientation:portrait) {
+				body { background:red;}
+			}
+			
+			@media screen and (orientation:landscape) {
+				body { background:green;}
+			}
+			
+			* {margin:0 auto; padding:0;}
+			div {
+				margin:0 auto;
+				width:50%;
+				max-width:420px;
+			}
+			img {
+				margin:100%;
+				height:auto;
+				border:solid 1px;
+			}
+		</style>
+	</head>
+	<body>
+		<div><img src="image/fashion2.png"></div>
+	</body>
+</html>

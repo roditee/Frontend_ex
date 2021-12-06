@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>flexbox</title>
+		<style>
+			* {margin:0; padding:0;}
+			.wrap {
+				display:flex;
+				/* justify-content:space-between; */
+				/* justify-content:space-around; */
+				justify-content:space-evenly;
+				flex-direction:row;
+				width:90%;
+				height:300px;
+				margin:0 auto;
+				border:4px solid #000;
+				margin-bottom:10px;
+			}
+			
+			.wrap div {
+				width:20%;
+			}
+			
+			.wrap div:first-child {
+				background:red;
+			}
+			
+			.wrap div:nth-child(2) {
+				background:blue;
+			}
+			
+			.wrap div:nth-child(3) {
+				background:yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div></div><div></div><div></div>
+		</div>
+		
+		<div class="wrap">
+			<div></div><div></div><div></div>
+		</div>
+	</body>
+</html>

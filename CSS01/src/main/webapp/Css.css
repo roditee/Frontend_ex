@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+* {margin:0; padding:0;}
+
+#wrap {
+	margin:0 auto; /* 나(본인 요소)가 가운데 정렬 */
+	width:800px;  /* 가운데 정렬하기 위해서는 width 값 있어야 함 */
+	text-align:center;  /* 내 안에 들어 있는 요소를 가운데 정렬  */ /* 테ㅇㅣ블ㄴㄴ 따로 */
+}
+
+#top {
+	height:35px;
+	line-height:35px; /* 줄 간격 -> 주식 가운데 정렬 효과 */
+	background:#3C3B41;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+#menuItem {
+	padding-left:0;
+	margin:0;
+	list-style:none;
+}
+
+#menuItem li {
+	float:left;
+	text-align:center;
+	width:25%; /* 각 항목들을 동일한 너비로 */
+}
+
+#menuItem a {
+	text-decoration:none;
+	color:white;
+	display:block; /* 여백 */ /* 있을때 없을 때 차이 확인 */
+	font-size:14px;
+	font-weight:bold;
+}
+
+#menuItem a:hover {
+	color:red;
+	text-decoration:underline;
+	background:black;
+}
+
+table {
+	margin:0 auto;
+	width:600px;
+	margin-bottom:30px;
+}
+
+#prdName {
+	color:blue;
+	font-weight:bold;
+}
+
+#prdPrice {
+	color:red;
+}
+
+#board div {
+	display:inline-block; /* 옆으로 나란히 배치 */
+	width:320px;
+	height:150px;
+	border:solid 1px gray;
+	border-radius:10px;
+	padding-left:20px;
+	padding-right:20px;
+	margin:10px;
+	text-align:left;
+}
+
+#board a { color:black; }
+
+#board a:hover {
+	color:red;
+}
