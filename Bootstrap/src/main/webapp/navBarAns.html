@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bootstrap 내비게이션 바</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery-3.6.0.min.js"></script>  <!-- jquery가 먼저 와야 함 -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active"><a class="nav-link" href="#">HOME</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Link1</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Link2</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Link3</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Link4</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Link5</a></li>
+					<!-- 드롭다운 메뉴 -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+								role="button" data-toggle="dropdown">Dropdown</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item">Dropdown Item1</a>
+							<a class="dropdown-item">Dropdown Item2</a>
+							<!-- <div class="dropdown-divider"></div> -->
+							<hr>
+							<a class="dropdown-item">Dropdown Item3</a>
+						</div>
+					</li>
+				</ul>
+				
+				<!-- 검색 폼 추가 -->
+				<form class="form-inline">
+			      <input class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search">
+			      <button class="btn btn-success" type="submit">Search</button>
+			    </form> 
+			</nav>		
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// 여기에 선언된 변수는 var 붙든 안 붙든 모두 전역변수
+			var x=5, y=10; // var를 붙인 명시적 선언. 전역변수
+			total=0; //var 없이 값 저장. 전역변수
+			
+			function f1() { // 모든 전역 변수 사용 가능
+				x = x+y;
+				document.write(x + "<br>");
+			}
+			
+			function f2() { // 모든 전역 변수 사용 가능
+				total = x+y;
+				document.write(total + "<br>");
+			}
+			
+			f1();
+			f2();
+			
+			document.write(x + "<br>");
+			document.write(total + "<br>");
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			var isStudent = confirm("당신은 학생입니까?");
+			
+			/* if (isStudent) {
+				document.write("학생입니다<br>할인률 : 50%");
+			}
+			else {
+				document.write("학생이 아닙니다<br>할인률 : 없음");
+			} */
+			
+			// 또는
+			
+			if (isStudent) {
+				result = "학생입니다";
+				discount = "50%";
+			}
+			else {
+				result = "학생이 아닙니다";
+				discount = "없음";
+			}
+			
+			document.write("결과 : " + result + "<br>");
+			document.write("할인률 : " + discount);
+			
+			// 또는 if (confirm("당신은 학생입니까?")) { ... } 도 가능
+			
+		</script>
+	</head>
+	<body>
+		<h1>body 본문에서 출력</h1>
+		
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			function f1() {
+				// 지역변수 : 함수 내에서 var/let 붙인 변수
+				// 함수 내에서만 사용 가능
+				var localVar1 = 100;
+			}
+			
+			// 함수 f1()에서 선언된 지역변수 사용 불가 : 아래 코드 실행 시 오류 발생 (undefined)
+			// f1(); // 값 저장을 위해서는 함수를 호출해주어야 함
+			// document.write(localVar1 + "<br>");
+			
+			function f2() {
+				// 전역변수 : 함수 내에서 var/let 안 붙이고 값을 저장한 변수
+				// 함수 밖에서도 사용 가능
+				localVar2 = 200;
+			}
+			
+			f2(); // 값 저장을 위해서는 함수를 호출해주어야 함
+			document.write(localVar2 + "<br>");
+			
+			function f3() {
+				// 지역변수 : 함수 내에서 var/let 붙인 변수
+				// 함수 밖에서도 사용 가능
+				let localVar3 = 300;
+			}
+			
+			f3();
+			document.write(localVar3 + "<br>"); // 오류 발생 -> 지역변수라서 접근 불가
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

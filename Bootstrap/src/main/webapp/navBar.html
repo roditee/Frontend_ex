@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bootstrap </title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active"><a class="nav-link" href="#">HOME</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Link1</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Link2</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Link3</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Link4</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Link5</a></li>
+					
+					<!-- dropdown 메뉴 -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Dropdown</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item">Dropdown Item1</a>
+							<a class="dropdown-item">Dropdown Item2</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item">Dropdown Item3</a>
+							<hr>
+							<a class="dropdown-item">Dropdown Item4</a>
+						</div>
+					</li>
+				</ul>
+				
+				<!-- 검색 폼 추가 -->
+				<form class="form-inline">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<!-- mr-sm-3 뒤의 숫자는 input과 button 사이의 간격 조절 -->
+					<button class="btn btn-success" type="submit">Search</button>
+				</form>
+			</nav>
+		</div>
+	</body>
+</html>
