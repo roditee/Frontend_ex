@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			var fruits = ["사과", "포도", "복숭아"];
+			fruits.forEach(function(item){
+				document.write(item + "<br>");
+			})
+			
+			document.write("<hr>");
+			
+			fruits.forEach(function(item, index){
+				document.write(index + " " + item + "<br>");
+			})
+			
+			document.write("<hr>");
+			
+			fruits.forEach(function(item, index, fruits){
+				document.write(index + " " + item + " " + fruits + "<br>");
+			})
+			
+			fruits.forEach(function(item, index, fruits){
+				console.log(index, item, fruits);
+			})
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

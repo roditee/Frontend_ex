@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			document.write('<button onClick="input();">숫자 입력</button>');
+			
+			function input() {
+				var answer = parseInt(prompt("숫자 입력"));
+				show(answer);
+			}
+			
+			function show(answer) {
+				for (let i=0; i<answer; i++) document.write("★");
+				/* 버튼 사라지지 않도록 출력하기 위해서는
+				document.body.innerHTML += "★"; 사용*/
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

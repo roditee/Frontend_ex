@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			let prdName1 = "노트북";
+			let prdName2 = "운동화";
+			let prdPrice1 = 1200000;
+			let prdPrice2 = 100000;
+			let orderPrice = 0;
+			let discount = 0;
+			let inputPrdNo = prompt("상품 번호 입력", "1또는 2 입력");
+			
+			if (inputPrdNo==1 || inputPrdNo==2) {
+				var orderQuantity = parseInt(prompt("주문 수량 입력"));
+				if (inputPrdNo==1) {
+					document.write(`상품명 : ${prdName1}<br>`);
+					document.write(`가격 : ${prdPrice1}원<br>`);
+					orderPrice = prdPrice1 * orderQuantity;
+				}
+				else if (inputPrdNo==2) {
+					document.write(`상품명 : ${prdName2}<br>`);
+					document.write(`가격 : ${prdPrice2}원<br>`);
+					orderPrice = prdPrice2 * orderQuantity;
+				}
+				
+				document.write(`주문수량 : ${orderQuantity}개<br>`);
+				document.write(`주문액 : ${orderPrice}원<br>`);
+				
+				if (orderPrice>=1000000) discountRate=10;
+				else if (orderPrice>=500000) discountRate=5;
+				
+				discountPrice = orderPrice*discountRate/100;
+				document.write(`할인액 : ${discountPrice}원<br>`);
+				document.write(`총지불액 : ${orderPrice - discountPrice}원<br>`);
+				
+				} else {
+				alert("잘못 입력하셨습니다.")
+				document.write("종료합니다.")
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

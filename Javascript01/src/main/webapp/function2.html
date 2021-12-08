@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// 다른 함수 내에서 함수 호출
+			
+			function start() {
+				var answer = confirm("배경 색을 변경하시겠습니까?");
+				if(answer) changeColor();
+				else alert("취소하였습니다.");
+			}
+			
+			function changeColor() {
+				var color = prompt("색상 입력", "red/blue/green...");
+				document.write(color);
+				document.bgColor = color;
+			}
+			
+			start();
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// 크기가 5인 배열 생성
+			var num = new Array(5);
+			
+			// 크기가 정해지지 않은 배열 선언
+			var player = new Array();
+			
+			// 배열 선언과 동시에 값 초기화
+			var fish = new Array("고등어", "갈치", "명태", "대구");
+			
+			// 각 원소의 데이터 타입이 다른 경우
+			var student = ["홍길동", 2, 95.3, 'A'];
+			
+			// num 배열의 각 원소 값 저장
+			for (var i=0; i<num.length; i++) num[i] = i;
+			
+			// player 배열의 각 원소 값 저장
+			for (var i=0; i<3; i++) player[i] = "선수" + (i+1);
+			
+			// 배열의 모든 원소의 값 출력 - for문 사용
+			document.write("num : ");
+			for(var i=0; i<num.length; i++)
+				document.write(num[i] + " ");
+			
+			document.write("<br>player : ");
+			for(var i=0; i<player.length; i++)
+				document.write(player[i] + " ");
+			
+			document.write("<br>fish : ");
+			for(var i=0; i<fish.length; i++)
+				document.write(fish[i] + " ");
+			
+			document.write("<br>student : ");
+			for(var i=0; i<student.length; i++)
+				document.write(student[i] + " ");
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

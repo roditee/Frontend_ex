@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 if문 연습문제 </title>
+		<script type="text/javascript">
+			var prdNum = prompt("상품번호 입력", "1 또는 2 입력");
+			
+			//1 또는 2 입력한 경우
+			if(prdNum == 1 || prdNum == 2){
+				let prdName, prdPrice, prdQty, amount, discount, total;
+				
+				// 입력한 상품번호에 따라 상품명, 가격 지정
+				if(prdNum == 1){
+					prdName = "노트북";
+					prdPrice = 1200000;
+				} else {
+					prdName = "운동화";
+					prdPrice = 100000;
+				}
+				
+				// 주문수량 입력
+				prdQty = prompt("주문수량 입력");
+				
+				// 주문액 구하기
+				amount = prdPrice * prdQty;
+				
+				// 할인액 구하기
+				if(amount >= 1000000)
+					discount = amount * 0.1;
+				else if(amount >= 500000)
+					discount = amount * 0.05;
+				else
+					discount = 0;  // discount=0으로 초기화 했으면 이 문장 필요 없음
+					
+				// 총지불액 구하기
+				total = amount - discount;
+					
+				// 결과 출력
+				/* document.write("상품명 : " + prdName + "<br>");
+				document.write("가격 : " + prdPrice + "원<br>");
+				document.write("주문수량 : " + prdQty + "개<br>");
+				document.write("주문액 : " + amount + "원<br>");
+				document.write("할인액 : " + discount + "원<br>");
+				document.write("총지불액 : " + total + "원<br>"); */
+				
+				document.write("상품명 : " + prdName + "<br>");
+				document.write("가격 : " + prdPrice.toLocaleString() + "원<br>");
+				document.write("주문수량 : " + prdQty.toLocaleString() + "개<br>");
+				document.write("주문액 : " + amount.toLocaleString() + "원<br>");
+				document.write("할인액 : " + discount.toLocaleString() + "원<br>");
+				document.write("총지불액 : " + total.toLocaleString() + "원<br>");
+				
+			} else {
+				alert("질못 입력하였습니다");
+				document.write("종료합니다");
+			}
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

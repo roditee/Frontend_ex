@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			let img = ['<img src="image/cherry.png">', '<img src="image/bomb.png">', '<img src="image/apple.png">'];
+			var i = 0;
+			let num = prompt("숫자 입력");
+			document.write(`<h2>총 ${num}개의 이미지 출력</h2>`);
+			while(num>0) {
+				if (i>=3) i=0;
+				document.write(img[i]);
+				i++;
+				num--;
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

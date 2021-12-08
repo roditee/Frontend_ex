@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<style>
+			th { background:yellow;}
+			td {
+				width:100px;
+				text-align:center;
+			}
+		</style>
+		<script type="text/javascript">
+			let sum = 0;
+			document.write('<table border="1"><tr><th>i</th><th>sum</th></tr>');
+			for (let i=1; i<=10; i++) {
+				sum+=i;
+				document.write(`<tr><td>${i}</td><td>${sum}</td></tr>`);
+			}
+			document.write("</table>");
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
