@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			
+			function input() {
+				var numArr = new Array(5);
+				for (let i=0; i<numArr.length; i++) {
+					numArr[i] = Number(prompt(`숫자${i+1} 입력`));
+				}
+				document.write(`최대값 : ${max(numArr)}`);
+			}
+			
+			function max(numArr) {
+				var max = -1;
+				for (var i=0; i<numArr.length; i++) {
+					if (numArr[i] > max) max = numArr[i];
+				}
+				return max;
+			}
+		</script>
+	</head>
+	<body onLoad="input()">
+		
+	</body>
+</html>

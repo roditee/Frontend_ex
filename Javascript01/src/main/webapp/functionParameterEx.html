@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			document.write('<button onClick="input()">테이블 만들기</button>');
+			function input() {
+				var rows = prompt("테이블의 행 수 입력");
+				var cols = prompt("테이블의 열 수 입력");
+				makeTable(rows, cols);
+			}
+			
+			function makeTable(rows, cols) {
+				document.write('<table border="1">')
+				for (let i=0; i<rows; i++) {
+					document.write('<tr>');
+					for (let j=0; j<cols; j++) {
+						document.write('<td>★</td>');
+					}
+					document.write('</tr>');
+				}
+				document.write('</table>')
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

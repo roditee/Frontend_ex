@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// 익명 함수를 콜백함수로 사용
+			var callback = function() {
+				alert("익명함수입니다");
+			}
+			
+			function show(callback) {
+				callback();
+			}
+			
+			show(callback);
+			
+			// 얘도 가능
+			/* function show(a) {
+				a();
+			}
+			
+			show(callback); */
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

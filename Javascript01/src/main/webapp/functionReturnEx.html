@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			document.write('<button onClick="start();">버튼</button>');
+			function start(){
+				var yesno = confirm("성적을 입력하시겠습니까?");
+				if (yesno) {
+					alert(`평균 : ${input()}`);
+				}
+				else alert("종료합니다.");
+			}
+			
+			function input() {
+				var kor = Number(prompt("국어 점수 입력"));
+				var eng = Number(prompt("영어 점수 입력"));
+				var math = Number(prompt("수학 점수 입력"));
+				return ((kor + eng + math)/3).toFixed(2);
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

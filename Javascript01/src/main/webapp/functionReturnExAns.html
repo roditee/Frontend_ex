@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 </title>
+		<script type="text/javascript">
+		function start() {
+			var yesNo = confirm("성적을 입력하시겠습니까?");
+			if(yesNo) {
+				alert("평균 : " + input());
+			} else 
+				alert("종료합니다");
+		}
+		
+		function input() {
+			var kor = Number(prompt("국어 점수 입력 : "));
+			var eng = Number(prompt("영어 점수 입력 : "));
+			var math = Number(prompt("수학 점수 입력 : "));
+			
+			var avg = (kor + eng + math) / 3; 
+			
+			return avg.toFixed(2);
+		}
+		
+		</script>
+	</head>
+	<body>
+		<button onClick=start()>성적 입력</button>
+	</body>
+</html>

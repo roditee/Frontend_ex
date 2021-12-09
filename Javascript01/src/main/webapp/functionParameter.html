@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// 예금액과 이자율을 전달받아 예금 이자 출력하는 함수
+			function calInterest(deposit, rate) {
+				var interest = deposit * rate / 100;
+				document.write(`예금 이자 : ${interest}원`);
+			}
+			
+			// 예금액과 이자를 입력받아서 calInterest() 함수에게 전달
+			function input() {
+				var deposit = parseInt(prompt("예금액 입력"));
+				var rate = parseInt(prompt("이자율 입력"));
+				calInterest(deposit, rate);
+			}
+		</script>
+	</head>
+	<body onLoad="input()">
+		
+	</body>
+</html>

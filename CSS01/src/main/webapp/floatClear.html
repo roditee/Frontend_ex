@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>float clear</title>
+		<style>
+			/* (1) float 적용될 다음 요소에 clear 적용 */
+			#menu{list-style:none; padding:0;}
+			#menu li {float:left;}
+			#p1 {
+				clear:left;
+				/* clear:right;
+				clear:both; */
+			}
+			
+			/* (2) float 적용된 요소의 부모 요소에 가상요소 ::after 만들고 clear 적용 */
+			#menu2{list-style:none; padding:0;}
+			#menu2 li {float:left;}
+			.clearfix::after {
+				display:block;
+				content:'';
+				clear:both;
+			}
+			
+			/* 부모 요소 <ul>에 height 속성 설정 */
+			#menu3 {
+				list-style:none;
+				padding:0;
+				height:20px;
+				background:#777;
+			}
+			#menu3 li {float:left;}
+			
+		</style>
+	</head>
+	<body>
+		<!-- float 적용될 다음 요소에 clear 적용 -->
+		<div>
+			<ul id="menu">
+				<li>메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+			</ul>
+			<p id="p1">메뉴 다음에 오는 요소</p>
+		</div>
+		
+		<hr>
+		
+		<!-- float 적용된 요소의 부모 요소에 clear 적용 -->
+		<div>
+			<ul id="menu2" class="clearfix">
+				<li>메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+			</ul>
+			<p id="p2">메뉴 다음에 오는 요소</p>
+		</div>
+		
+		<hr>
+		
+		<!-- 부모 요소 <ul>에 height 속성 설정 -->
+		<div>
+			<ul id="menu3" class="clearfix">
+				<li>메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+			</ul>
+			<p id="p3">메뉴 다음에 오는 요소</p>
+		</div>
+	</body>
+</html>

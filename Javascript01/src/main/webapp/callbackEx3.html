@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// 지역 변수를 콜백함수 매개변수로 전달
+			
+			// 전역변수
+			let globalVar = 100;
+			
+			// 매개변수가 있는 익명 함수
+			var show = function(localVar) {
+				document.write(`전역변수 : ${globalVar} / 지역변수 : ${localVar}`);
+			}
+			
+			// 전달된 show 함수를 callback으로 받음
+			function call(callback) {
+				let localVar = 1;
+				callback(localVar); // show 함수 호출하면서 localVar 전달
+			}
+			
+			// call 함수 호출하면서 show 함수 전달
+			call(show);
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

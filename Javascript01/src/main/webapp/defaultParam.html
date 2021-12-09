@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// 디폴트 매개변수 : 함수 매개변수에 기본값 설정
+			function rect(width=10, height=20) {
+				document.write("width = " + width + "<br>");
+				document.write("height = " + height + "<br>");
+				return width*height;
+			}
+		
+			document.write(rect() + "<br>");
+			document.write(rect(30) + "<br>");
+			document.write(rect(100, 200) + "<br>");
+			
+			document.write("<hr>");
+			
+			// 디폴트 매개변수는 맨 뒤에 위치
+			function showInfo(name, score, year=4) {
+				document.write("name = " + name + "<br>");
+				document.write("year = " + year + "<br>");
+				document.write("score = " + score + "<br>");
+			}
+			
+			showInfo();
+			showInfo("홍길동");
+			showInfo("홍길동", 80);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

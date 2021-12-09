@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// forEach 함수를 화살표 함수를 사용해서 변경
+			var fruits = ["사과", "포도", "복숭아"];
+			
+			// 기존 코드
+			/* fruits.forEach(function(item, index, fruits){
+				document.write(index + " " + item + " " + fruits + "<br>");
+			}) */
+			
+			fruits.forEach((item, index, fruits) => document.write(index + " " + item + " " + fruits + "<br>"));
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

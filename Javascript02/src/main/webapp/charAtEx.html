@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			var input = prompt("입력하세요.");
+			var cnt = 0;
+			for (let i=0; i<input.length; i++) {
+				if (!(Number(input.charAt(i)))) cnt++;
+				document.write(input.charAt(i));
+			}
+			if (cnt>0) alert("숫자 형식이 아닙니다.");
+			
+			// 또는
+			/* for (let i=0; i<input.length; i++) {
+				if (!(Number(input.charAt(i)))){
+					alert("숫자 형식이 아닙니다.");
+					break;
+				}
+			} */
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
