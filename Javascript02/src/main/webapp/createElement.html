@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			window.onload = function() {
+				// 1. 요소 노드 생성
+				// <h3> 태그 생성하여 객체 참조 변수에 저장
+				var h3 = document.createElement('h3');
+				
+				// text 노드 생성
+				var text = document.createTextNode("출력할 텍스트");
+				
+				// 2. 문서에 출력
+				// 텍스트를 변수 h3에 연결
+				h3.appendChild(text);
+				
+				// h3을 body에 연결 (부착)
+				document.body.appendChild(h3);
+			};
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

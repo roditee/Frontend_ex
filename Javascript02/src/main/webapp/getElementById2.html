@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<style>
+			div { margin:0 auto; width:60%; text-align:center; }
+		</style>
+		<script type="text/javascript">
+			function change() {
+				var img = document.getElementById("imageA");
+				img.src="image/B.png";
+				
+				var hint = document.getElementById("hint");
+				hint.innerHTML = "새로운 이미지로 변경되었습니다.";
+				hint.style.background = "lightgreen";
+				
+				var btn = document.getElementById("changeButton");
+				btn.innerHTML = "완료";
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<img id="imageA" src="image/A.png">
+			<div id="hint">[변경] 버튼을 누르면 이미지가 변경됩니다.</div><br><br>
+			<button id="changeButton" onClick="change()">변경</button>
+		</div>
+	</body>
+</html>

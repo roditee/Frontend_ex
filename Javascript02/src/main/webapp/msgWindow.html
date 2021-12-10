@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			function winClose() {
+				window.close();
+				opener.focus(); // 현재 창을 연 부모 창에 포커스 줌
+			}
+		</script>
+	</head>
+	<body onLoad="setTimeout('winClose()', 3000);">
+		공지 사항<br>
+		이 창은 3초 후에 닫힙니다.
+	</body>
+</html>

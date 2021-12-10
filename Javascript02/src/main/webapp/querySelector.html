@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			window.onload = function() {
+				var headers = document.querySelector('h1'); // 배열로 생성됨
+				
+				for (var i=0; i<headers.length; i++) {
+					var header = headers[i];
+					
+					header.style.color = "orange";
+					header.style.background = "gray";
+					header.innerHTML = "javascript";
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<h1>Header</h1>
+		<h1>Header</h1>
+		<h1>Header</h1>
+	</body>
+</html>

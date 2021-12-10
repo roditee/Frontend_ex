@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// 윈도우 로드 되었을 때
+			window.onload = function() {
+				var birdImg = document.getElementById("birdImg");
+				
+				// 이미지에 마우스 올렸을 때 이벤트 처리
+				birdImg.onmouseover = function() {
+					birdImg.style.opacity = 0.5; // 불투명도
+				}
+				
+				// 이미지에서 마우스 땠을 때 이벤트 처리
+				birdImg.onmouseout = function() {
+					birdImg.style.opacity = 1;
+				}
+			}
+			
+			// 문서 상에서 오른쪽 마우스 클릭했을 때 이벤트 처리
+			document.oncontextmenu = function() {
+				alert("마우스 오른쪽 버튼 사용을 금지합니다.");
+				// return false;
+				event.preventDefault(); // 기본으로 contextmenu가 뜨게 되는 것을 막아줌
+			}
+		</script>
+	</head>
+	<body>
+		<img id="birdImg" src="image/bird.jpg">
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			window.onload = function() {
+				var btn = document.getElementById("btn");
+				
+				btn.addEventListener("click", show1); // 콜백 함수
+				btn.addEventListener("click", show2);
+			}
+			
+			function show1() {
+				alert("실행1");
+			}
+			
+			function show2() {
+				alert("실행2");
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn">클릭</button>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			function change() {
+				// 태그의 id 속성의 값이 'header'인 문서 객체 반환
+				var header = document.getElementById('header');
+				
+				// 요소의 텍스트 내용 변경
+				header.innerHTML = "변경된 제목";
+			}
+		</script>
+	</head>
+	<body>
+		<h1 id="header">제목</h1>
+		<button id="btn" onClick="change()">제목 변경</button>
+	</body>
+</html>

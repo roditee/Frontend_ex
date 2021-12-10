@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// 새로운 창을 만들ㅇ러서 열기
+			// 새로운 창에 문자열과 버튼 출력
+			// 버튼 클릭 시 창 닫는 기능 포함
+			function openNewWindow() {
+				// 작업에 사용하기 위해 변수로 만들어 줌 
+				var createWin = window.open("", "newWin", "width=400, height=150");
+				createWin.document.write("새로 만든 윈도우 창입니다.<br>");
+				createWin.document.write("<button onClick='window.close()'>닫기</button>");
+			}
+			
+			function openWindow() {
+				window.open("windowOpen.html", "bigWin",
+						"width=600, height=800, left=200, top=50, status=yes, scrollbars=yes, resizable=yes");
+			}
+		</script>
+	</head>
+	<body>
+		<button onClick="openNewWindow()">새 창 열기</button>
+		<button onClick="openWindow()">BigImage 열기</button>
+	</body>
+</html>

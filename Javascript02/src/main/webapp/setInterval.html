@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			function showTime() {
+				var today = new Date();
+				var hour = today.getHours();
+				var minute = today.getMinutes(); // getMonth()가 0부터 반환
+				var second = today.getSeconds();
+				var ampm = "오전";
+				
+				if (hour==24) {
+					hour-=24;
+				} else if (hour >= 12) {
+					ampm = "오후";
+					if (hour>12) {
+						hour-=12;
+					}
+				}
+				
+				var time = ampm + hour +"시" + minute +"분" + second + "초";
+				timeShow.innerHTML = time;
+			}
+		</script>
+	</head>
+	<body>
+		<button onClick="timerID = setInterval('showTime()', 1000)">시간 출력</button>
+		<button onClick="clearInterval(timerID)">시간 정지</button>
+		<h2 id="timeShow">시간 여기에 출력</h2>
+	</body>
+</html>

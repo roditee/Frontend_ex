@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<style>
+			div {margin:0 auto; width:100%; text-align:center;}
+		</style>
+		<script type="text/javascript">
+			var countTime = 10;
+			var idx = 1;
+			
+			function start() {
+				timerID = setInterval('bombCount()', 500);
+			}
+			
+			function bombCount() {
+				countH1.innerHTML = countTime;
+				bombImg.src = `image/bomb${idx}.jpg`;
+				countTime--;
+				idx++;
+				
+				if (idx == 12) {
+					clearInterval(timerID);
+					idx = 1;
+					countTime = 10;
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<h1 id="countH1">10</h1>
+			<img id="bombImg" src="image/bomb1.jpg"><br><br>
+			<button id="btn" onClick="start()">카운트 다운 시작</button>
+		</div>
+	</body>
+</html>

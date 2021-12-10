@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			function start() {
+				alert("이미지 10개 출력");
+				timerID = setInterval('showImage()', 1000);
+			}
+			
+			var count = 0;
+			var num = 1;
+			var idx = 0;
+			
+			function showImage() {
+				count++;
+				let img = ['<img src="image/cherry.png">', '<img src="image/bomb.png">', '<img src="image/apple.png">'];
+				
+				if (count >= 10) {
+					clearInterval(timerID);
+					alert("이미지 출력 완료")
+				}
+				
+				if (idx>=3) idx=0;
+				document.write(img[idx]);
+				idx++;
+				num++;
+			}
+		</script>
+	</head>
+	<body onLoad="start()">
+		
+	</body>
+</html>

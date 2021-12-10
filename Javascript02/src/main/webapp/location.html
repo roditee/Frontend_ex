@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			function hrefMove() {
+				location.href="http://www.google.com"; // 크롬 사용 시
+				
+				// 크롬에서는 지원되지 않는 형식-> 위 코드처럼 메소드가 아닌 속성값 부여를 통해 사용 가능
+				// window.location.href("http://www.google.com");
+			}
+			
+			function assignMove() {
+				// window 생략 가능
+				window.location.assign("http://www.daum.net");
+			}
+						
+			function replaceMove() {
+				// window 생략 가능
+				// 뒤로 가기 버튼 적용 안 됨
+				window.location.replace("http://www.youtube.com");
+			}
+		</script>
+	</head>
+	<body>
+		<a href="http://www.naver.com">네이버</a><br><br>
+		
+		<button onClick="hrefMove()">구글</button>
+		<button onClick="assignMove()">다음</button>
+		<button onClick="replaceMove()">유튜브</button>
+	</body>
+</html>

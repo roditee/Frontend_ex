@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			window.onload = () => {
+				let box = document.getElementById("box");
+				
+				box.addEventListener("mousedown", event => {
+					event.currentTarget.style.background="green";
+				});
+				
+				box.addEventListener("mouseup", event => {
+					event.currentTarget.style.background="white";
+				});
+			};
+				
+		</script>
+	</head>
+	<body>
+		<button id="box">클릭</button>
+	</body>
+</html>

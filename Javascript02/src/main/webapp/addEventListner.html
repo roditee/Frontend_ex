@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			window.onload = function() {
+				var greenBtn = document.getElementById("greenBtn");
+				var redBtn = document.getElementById("redBtn");
+				var h2 = document.getElementById("h2");
+				
+				greenBtn.addEventListener("click", function() {
+					h2.style.color = "green";
+				});
+				
+				redBtn.addEventListener("click", function() {
+					h2.style.color = "red";
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<h2 id="h2">제목 색상 변경</h2>
+		<button id="greenBtn">green</button>
+		<button id="redBtn">red</button>
+	</body>
+</html>

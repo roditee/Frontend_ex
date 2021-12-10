@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<style>
+			div {margin:0 auto; width:600px; text-align:center;}
+			table {margin:0 auto; width:100%; height:100px;}
+			td {width:50px; height:30px;}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				// 모든 td 요소 다 가져오기
+				var tdArr = document.getElementsByTagName('td');
+				
+				var setNumberBtn = document.getElementById('setNumberBtn');
+				var setColorBtn = document.getElementById('setColorBtn');
+				var clearNumberBtn = document.getElementById('clearNumberBtn');
+				var clearColorBtn = document.getElementById('clearColorBtn');
+				
+				// 셀에 번호 채우기
+				setNumberBtn.onclick = function() {
+					for (var i=0; i<tdArr.length; i++) {
+						tdArr[i].innerHTML = i;
+					}
+				};
+				
+				// 셀에 7가지 색상 채우기
+				setColorBtn.onclick = function() {
+					
+					var colors = ["red", "orange", "yellow", "green", "blue", "pink", "gray"];
+					for (var i=0; i<tdArr.length; i++) {
+						tdArr[i].style.background = colors[i];
+					}
+				};
+				
+				// 셀의 번호 지우기
+				clearNumberBtn.onclick = function() {
+					for (var i=0; i<tdArr.length; i++) {
+						tdArr[i].innerHTML = "";
+					}
+				};
+				
+				// 셀의 색상 지우기
+				clearColorBtn.onclick = function() {
+					for (var i=0; i<tdArr.length; i++) {
+						tdArr[i].style.background = "none"; //또는 ""
+					}
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<div>
+			<table border="1">
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+			</table>
+			<br><br>
+			<button id="setNumberBtn">셀에 번호 채우기</button>
+			<button id="setColorBtn">셀에 색상 채우기</button>
+			<br><br>
+			<button id="clearNumberBtn">셀에 번호 지우기</button>
+			<button id="clearColorBtn">셀에 색상 지우기</button>
+		</div>
+	</body>
+</html>
