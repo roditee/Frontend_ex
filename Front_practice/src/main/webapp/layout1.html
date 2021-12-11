@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>layout_1</title>
+		<style>
+			* { margin:0; padding:0;}
+			#wrap {
+				margin:0 auto;
+				width:1100px;
+				background-color:white;
+				color:black;
+			}
+			
+			header {
+				background-color:rgb(200, 216, 223);
+				text-align:center;
+				height:100px;
+				line-height:100px;
+			}
+			
+			#mainMenu {
+				height:35px;
+				line-height:35px;
+				background-color:rgb(200, 216, 223);
+				text-align:center;
+				border-top:1px solid rgb(166, 191, 204);
+				border-bottom:1px solid rgb(166, 191, 204);
+			}
+			
+			section { 
+				padding-top:10px;
+				padding-bottom:10px;
+				width:1100px;
+				background-color:rgb(200, 216, 223);
+				text-align:center;
+			}
+			
+			#sectionLeft {
+				width:800px;
+			}
+			
+			#sectionRight {
+				width:250px;
+			}
+			
+			section > div { 
+				display:inline-block;
+			}
+			
+			article {
+				background-color:white;
+			}
+			
+			article div {
+				margin-top:5px;
+			}
+			
+			footer {
+				background-color:rgb(200, 216, 223);
+				text-align:center;
+				height:100px;
+				line-height:100px;
+				border-top:1px solid rgb(166, 191, 204);
+			}
+			
+			.shopping div, .hotTrend div {
+				height:600px;
+				vertical-align:middle;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+				<div>헤더</div>
+			</header>
+			<nav>
+				<div id="mainMenu">메뉴</div>
+			</nav>
+			<section>
+				<div id="sectionLeft">
+					<article class="advertise"><div>광고1</div></article>
+					<article class="issue"><div>이슈 요약</div></article>
+					<article class="press"><div>언론사</div></article>
+					<article class="hotTrend"><div>인기 트렌드</div></article>
+					<article class="advertise"><div>광고3</div></article>
+				</div>
+				<div id="sectionRight">
+					<article class="myInfo"><div>내 정보</div></article>
+					<article class="weather"><div>날씨 정보</div></article>
+					<article class="advertise"><div>광고2</div></article>
+					<article class="shopping"><div>쇼핑</div></article>
+					<article class="advertise"><div>광고4</div></article>
+				</div>
+			</section>
+			<footer>
+				<div id="Info">공지사항</div>
+			</footer>
+		</div>
+	</body>
+</html>
