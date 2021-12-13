@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// 자바스크립트 객체 생성
+			let car = {
+				no:'11가1111',
+				name:'소나타',
+				maker:'현대',
+				cc:2000,
+				year:2021,
+				accidient:null
+			};
+			
+			// 자바스크릡트 객체를 JSON 데이터로 변환
+			var json = JSON.stringify(car);
+			console.log(json);
+			
+			// JSON 데이터를 자바스크립트 객체로 변환
+			var obj = JSON.parse(json);
+			console.log(obj);
+			console.log(obj.no);
+			console.log(obj.name);
+			
+			for (var i in obj) {
+				console.log(obj[i]);
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

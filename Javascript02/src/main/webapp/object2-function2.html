@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// 생성자 함수를 이용해서 객체 정의 (선언)
+			function ListTag() {
+				// 프로퍼티 지정
+				this.ulTag = document.createElement("ul");
+				this.ulTag.type = "square";
+				
+				// <li> 태그 생성해서 <ul> 태그에 추가
+				for (var i=0; i<=5; i++) {
+					var listItem = document.createElement("li");
+					var itemInput = prompt("꽃" + i+1 + "입력");
+					listItem.innerHTML = itemInput;
+					// <ul> 태그에 <li> 태그 추가
+					this.ulTag.appendChild(listItem);
+				}
+				
+				// 멤버 메서드
+				this.getListItem = function() {
+					return this.ulTag;
+				}
+			}
+			
+			// 객체 생성
+			window.onload = function() {
+				var list = new ListTag();
+				
+				// box <div> 태그에 <ul>태그 (객체) 추가
+				var box = document.getElementById("box");
+				box.appendChild(list.getListItem());
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

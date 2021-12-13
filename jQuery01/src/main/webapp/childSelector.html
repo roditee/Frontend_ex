@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(function(){ //$(document).ready(함수)의 단축 형태
+					//1. <ol> 태그의 모든 자손 <li> 태그 글자색 red
+					$('ol li').css('color', 'red');
+
+					//2. <ol> 태그의 자식 <li> 태그 글자색 blue
+					$('ol>li').css('color', 'blue');
+
+					//3. 아이디가 children인 요소의 자식 <li> 태그 밑줄
+					$('#children>li').css('textDecoration', 'underline');
+					
+					//4. 클래스가 method 요소의 모든 자손 요소의 글자색을 black
+					//find() 메소드 사용
+					$('.method').find('li').css('color', 'black');				
+
+					//5. 클래스가 method 요소의 자식 요소에 속성 2개 설정
+					//children() 메소드 사용
+					$('.method').children('li').css({'color':'green', 'font-style':'italic'});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h3>자식/자손 선택자</h3>
+        <ol>
+        	<li>자손 요소의 선택 방법</li>
+                <ul>
+                       <li>&#36;(“선택자 선택자”)</li>
+                       <li>$(“ol li”)</li>
+                       <li>ol 의 자손인 모든 li 태그 선택 : 글자색(red)</li>
+                </ul> 
+            <li>자식 요소의 선택 방법</li>
+                <ul id="children">
+                   <li>$(“선택자>선택자”)</li>
+                   <li>$(“ol>li”)</li>
+                   <li>ol의 자식인 li 태그 선택 : 글자색(blue)</li>
+                   <li>$(“ul>li”)</li>
+                   <li>ul의 자식인 li 태그 선택 : 글자(underline)</li>
+                </ul>               
+             <li>메소드를 사용하는 방법</li>   
+                 <ol class="method">
+                   <li>자손 요소 선택 : find()</li>
+                   	<ul>
+                       <li>$(“선택자”).find(“선택자”)</li>
+                       <li>$(“.method).find(“li”)</li>
+                       <li>클래스 method 모든 자손 li 태그 선택 : 글자색(black)</li>
+                    </ul>       
+                   <li>자식 요소 선택 : children()</li>
+                   	<ul>
+                       <li>$(“선택자”).children(“선택자”)</li>
+                       <li>$(“.method).children(“li”)</li>
+                       <li>클래스 method 자식 선택 : 글자색(green)</li>
+                    </ul>
+                 </ol>            
+        </ol>
+	</body>
+</html>

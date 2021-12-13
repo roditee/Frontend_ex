@@ -3,12 +3,14 @@
     <head>
         <meta charset="utf-8">
         <title>회원 가입 폼</title>
-        <script src="checkForm.js"></script>
         <style>
-        	h2 {margin-top:35px; margin-bottom:35px;}
+        	/* table {vertical-align:center;} */
+        	h2 #joinTitle {margin-top:35px; margin-bottom:35px;}
+        	h2 #requiredInfo {margin-bottom:22px;}
         	form {margin-top:30px;}
         	tr {height:50px;}
         	input {height:20px;}
+        	select {height:25px;}
         	img {height:14px; width:14px;}
         </style>
     </head>
@@ -16,9 +18,10 @@
     <body>
     	<div id="wrap">
               <div id="joinBox">                     
-                  <h2  align="center">JOIN US</h2>
+                  <h2 align="center" id="joinTitle">JOIN US</h2>
                   <hr>
                    <form  name="joinForm" id="joinForm" method="post" action="newMemberOk.jsp">
+                   	<span><h2 id="requiredInfo">기본 정보</h2></span>
                        <table align="center">	
                            <tr>
                                <td>성명</td>
@@ -161,10 +164,10 @@
                                </td>
                            </tr>       
                             <tr>
-                               <td>관심분야</td>
+                               <td>약관 동의 여부</td>
                                <td>
                                    <label><input type="checkbox" id="agreement1" value="모든약관">모든 약관에 동의</label>
-							        <label><input type="checkbox" id="agreement1" value="개인정보">개인정보 이용 동의</label>
+							        <label><input type="checkbox" id="agreement2" value="개인정보">개인정보 이용 동의</label>
                                </td>
                            </tr>		
                            <tr>
@@ -173,7 +176,7 @@
                                    <input type="reset" value="취    소">
                                </td>
                            </tr>
-                       </table>	
+                       </table>
                    </form>
              </div>    
         </div>

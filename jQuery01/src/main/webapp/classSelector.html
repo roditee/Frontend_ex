@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.group1').css({
+            		float: 'left',
+            		background:'blue',
+            		color:'white',
+            		width: '90%',
+            		height: '30px'
+	            });
+				
+	            $('.group2').css({
+	        		float: 'right',
+	        		background:'yellow',
+	        		color:'black',
+	        		width: '90%'
+	        	});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="box1">
+			<div class="group1">A</div>
+			<div class="group2">A</div>
+			<div class="group1">B</div>
+			<div class="group2">B</div>
+			<div class="group1">C</div>
+			<div class="group2">C</div>
+		</div>
+	</body>
+</html>

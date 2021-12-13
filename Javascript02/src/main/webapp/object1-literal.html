@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// 객체 생성 1
+			var person = {
+					name:"홍길동",
+					age:20,
+					getName:function() {
+						return this.name;
+					}
+			};
+			
+			// 객체 사용
+			console.log(person.name);
+			console.log(person.age);
+			console.log(person.getName());
+			
+			// 프로퍼티 존재 여부 확인
+			console.log("name" in person);
+			
+			// 객체 생성 2
+			let car = {
+				no:'11가1111',
+				name:'소나타',
+				maker:'현대',
+				cc:2000,
+				year:2021
+			}
+			
+			// 전체 프로퍼티 값 출력
+			for (let i in car) {
+				console.log(car[i]);
+			}
+			
+			// 객체 생성 3
+			// 하위 프로퍼티 포함
+			var circle = {
+					center:{x:1.0, y:2.0},
+					radius:2.5,
+					getArea:function() {
+						return this.radius * this.radius * 3.14;
+					}
+			};
+			
+			console.log(circle.center.x, circle.center.y);
+			console.log(circle.getArea());
+			
+			// 두 점 사이의 거리 구하는 예
+			// 두 점 사이의 거리를 구해서 반환하는 함수
+			function getDistance(p1, p2) {
+				var dx = p2.x - p1.x;
+				var dy = p2.y - p1.y;
+				return Math.sqrt(dx*dx + dy*dy);
+			}
+			
+			var p1 = {x:5, y:2};
+			var p2 = {x:4, y:7};
+			
+			console.log(getDistance(p1, p2));
+			
+			
+			// 매개변수로 값 전달
+			function Book(title, author, price, date) {
+				this.title = title;
+				this.author = author;
+				this.price = price;
+				this.date = date;
+				this.getBook = function() {
+					return this.title + " " + this.author + " " + this.price + " " + this.date;
+				}
+			}
+			
+			// 객체 생성하면서 생성자 함수에게 값 전달
+			let book = new Book("자바스크립트", "이몽룡", 20000, "2021-12-11");
+			console.log(book.getBook());
+			
+			// 함수이므로 호이스팅 가능
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

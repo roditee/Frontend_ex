@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#h1').css('color', 'green');
+				$('#h2').css('background', 'gray');
+				
+				// 메소드 체인 방식
+				$('h1').css('width', '50%').css('height', '40px');
+			});
+		</script>
+	</head>
+	<body>
+		<h1 id="h1">Header1</h1>
+		<h1 id="h2">Header2</h1>
+		<h1>Header3</h1>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript </title>
+		<script type="text/javascript">
+			// new Object() 이용해서 빈 객체 생성
+			var person = new Object();
+			
+			// 프로퍼티 추가
+			person.name = "홍길동";
+			person.age = 20;
+			
+			// 멤버 메서드 추가
+			person.getName = function() {
+				return this.name;
+			}
+			
+			console.log(person.getName());
+			console.log(person.age);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

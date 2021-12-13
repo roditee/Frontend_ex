@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+			});
+		</script>
+	</head>
+	<body>
+		<h1>속성 선택자</h1>
+      <form id="form1" method="post" action="ok.jsp">
+          <table>
+            <tr><td>이름</td><td><input type="text" id="name" value="홍길동"></td></tr>
+            <tr><td> ID</td><td><input type="text" id="id"></td></tr>
+            <tr><td>비밀번호</td><td><input type="password" id="passwd"></td></tr>
+            <tr><td>취미 :</td>
+                  <td><input type="checkbox"  id="sports" value="운동">운동
+                         <input type="checkbox"  id="fishing" value="낚시">낚시
+                         <input type="checkbox"  id="swimming" value="수영">수영</td></tr>
+            <tr><td>직업</td>
+                  <td><select id="job">
+                               <option value="학생">학생</option>
+                               <option value="프로그래머">프로그래머</option>
+                               <option value="웹디자이너">웹디자이너</option>
+                               <option value="회계사">회계사</option>
+                               <option value="의사">의사</option>	
+                          </select></td></tr>
+             <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="완료">
+                    <input type="reset" value="취소">
+                </td>
+            </tr>             
+        </table>
+      </form>
+	</body>
+</html>
