@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<style>
+			#menuBox div {
+				float:left;
+				background-color:green;
+				width:100px;	
+				height:50px;		
+			}
+		</style>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var $menuItem = $('.menuItem'); // 총 4개
+				// alert($menuItem.length); // 길이 확인
+				
+				// index 값 출력할 <span> 태그 선택
+				var $indexSpan = $('#indexSpan');
+				
+				// 4개 div에 대해서
+				// 각 div 객체에 대해 메소드 수향 : each() 메소드 사용
+				// each() 메소드에는 기본적으로 index 의미의 매개변수 포함되어 있음
+				$menuItem.each(function(index) {
+					$(this).hover( // 매개변수 : 마우스 올렸을 때 호출할 작업, 마우스 땠을 때 호출할 작업
+						function() {
+							$(this).css('background', 'yellow');
+							$indexSpan.text(index);
+						},
+						function() {
+							$(this).css('background', 'green');
+							$indexSpan.text("");
+						}
+					) // hover() 종료
+				}); // each() 종료
+			});
+		</script>
+	</head>
+	<body>
+		<div id="wrap">  
+			<h2>인덱스 : <span id="indexSpan">index</span></h2>
+			<div id="menuBox">
+			   <div class="menuItem"></div>
+			   <div class="menuItem"></div>
+			   <div class="menuItem"></div>
+			   <div class="menuItem"></div>     
+		    </div>
+        </div>
+	</body>
+</html>

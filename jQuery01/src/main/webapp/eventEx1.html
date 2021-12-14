@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<style>
+			#btn {
+			background:rgb(64, 128, 128);
+			width:80px;
+			height:50px;
+			border-radius:20px;
+			font-size:15px;
+			color:white;
+			};
+		</style>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#btn').hover
+					(function() {$(this).css('opacity', 0.5);},
+					function() {$(this).css('opacity', 1.0);})
+			});
+		</script>
+	</head>
+	<body>
+		<button id="btn">버튼</button>
+	</body>
+</html>

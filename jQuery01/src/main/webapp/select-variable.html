@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.group1').css({
+            		float: 'left',
+            		background:'blue',
+            		color:'white',
+            		width: '90%',
+            		height: '30px'
+	            });
+				
+	            $('.group2').css({
+	        		float: 'right',
+	        		background:'yellow',
+	        		color:'black',
+	        		width: '90%'
+	        	});
+	            
+	            // (1)
+	            // jQuery 변수 사용 : $변수명
+	            /* var $divs = $('div'); // $divs : jQuery 변수
+	            alert($divs.length);  //  속성 사용
+	            $divs.css('color', 'red');  // 메소드 사용 */
+	            
+	         	// (2)
+	            // 변수명에서 $제거하고 사용 : 자바스크립트 변수(객체)로 사용
+	            var divs2 = $('div'); // divs : 자바스크립트 변수
+	            // alert($divs2.length);
+	            $divs2.css('color', 'pink');  // css() 메소드 적용 되었음
+	            // 선택을 $('div')로 했기 때문에 속성과 jQuery 메소드 사용 가능
+	            
+	            // (3)
+	            // 자바스크립트 DOM 선택 방법으로 선택한 경우
+	            // jQuery 메소드 사용 불가
+	            // 변수 속성은 사용 가능
+	            /* var box1 = document.getElementById('box1');
+	            box1.css('color', 'red'); // css() 메소드 사용 불가 -> 오류 */
+	            var divs = document.getElementByTagName('div');
+	            alert(divs.length);
+	            
+			});
+		</script>
+	</head>
+	<body>
+		<div id="box1">
+			<div class="group1">A</div>
+			<div class="group2">A</div>
+			<div class="group1">B</div>
+			<div class="group2">B</div>
+			<div class="group1">C</div>
+			<div class="group2">C</div>
+		</div>
+	</body>
+</html>

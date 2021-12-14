@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#department').on('change', function() {
+					$('span').text($(this).val());
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<select id="department" name="department">
+			<option value="">선택하세요</option>
+		   <option value="경영학과">경영학과</option>
+		   <option value="산업공학과">산업공학과</option>
+		   <option value="경제학과">경제학과</option>
+		   <option value="전자공학과">전자공학과</option>
+		   <option value="컴퓨터학과">컴퓨터학과</option>
+		</select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<span>학과</span>
+	</body>
+</html>

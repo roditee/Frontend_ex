@@ -13,7 +13,16 @@
 		<script src="jquery-3.6.0.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				
+				$('p').parents().css('backgroundColor', 'yellow'); // 모든 조상
+				$('p').parents('#area').css('backgroundColor', 'white'); // 조상 area
+				$('p').parents('#c1, #c2').css('backgroundColor', 'brown'); // 조상 c1, c2
+				$('p').parent().css('backgroundColor', 'green'); // p의 부모
+				$('#c1').next().css('backgroundColor', 'pink'); // 바로 다음 요소 : next()
+				$('#c2').nextAll().css('backgroundColor', 'orange'); // 다음 모든 요소 : nextAll
+				$('#c4').prevAll().css('color', 'blue'); // 이전 모든 요소 : nextAll
+				// c1 다음 c4 이전 : c2, c3
+				$('#c1').nextUntil('#c4').css('borderRadius', '20px'); // 조상 c1, c2
+				$('#c3').prevUntil('#c1').css('border', 'solid 5px red'); // 조상 c1, c2
 			});
 		</script>
 	</head>

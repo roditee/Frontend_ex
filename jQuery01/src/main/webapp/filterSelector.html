@@ -6,7 +6,35 @@
 		<script src="jquery-3.6.0.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
+				// table1에서 찾기
+				// 1. 홀수 행 선택 (행 인덱스 : 0부터 시작)
+				$('#table1 tr:odd').css('background-color', 'gray');
 				
+				// 2. 짝수 행 선택 (행 인덱스 : 0부터 시작)
+				$('#table1 tr:even').css('background-color', 'green');
+				
+				// 3. 첫 번째 행 (0행)
+				$('#table1 tr:first').css({
+					'background-color':'orange',
+					'fontSize':'15pt',
+				});
+				
+				// 4. 특정 행 선택 : tr의 5행 (여섯번째 행)
+				$('#table1 tr:eq(5)').css('color', 'red');
+				
+				// 5. tr의 5행보다 큰 행 전부 선택
+				$('#table1 tr:gt(5)').css('color', 'blue');
+				
+				// table2에서 찾기
+				// 6. tr의 0행 제외하고 모두 선택
+				$('#table2 tr:not(tr:eq(0))').css('background', 'gold');
+				
+				// nth : 서수 (~번째)
+				// 7. nth-child(숫자n+1)
+				$('#table2 tr:nth-child(3n+1)').css('background', 'orange');
+				
+				// 8. 짝수 열 선택 : nth-child(숫자n) : 2n
+				$('#table2 td:nth-child(2n)').css('background', 'red');
 			});
 		</script>
 	</head>

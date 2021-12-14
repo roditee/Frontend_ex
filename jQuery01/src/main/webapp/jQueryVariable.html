@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var $box1 = $('#box1');
+				$box1.css('color', 'red');
+				$box1.text(typeof $box1);
+				
+				var $box2 = $('#box2');
+				// alert($box2.text());
+				/* var $divLen = $('div').length;
+				$box2.text(typeof $divLen); */
+				var divLen = $('div').length;
+				$box2.text(typeof divLen);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="box1">box1</div>
+		<div id="box2">box2</div>
+		<div id="box3">box3</div>
+	</body>
+</html>

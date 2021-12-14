@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(window).resize(function() {
+					//윈도우 크기 알아와서
+					// 값이므로 굳이 jQuery 변수로 안 받아와도 됨
+					var winWidth = $(window).width();
+					var winHeight = $(window).height();
+					
+					// <h3> 태그에 크기 출력
+					$('h3').text("윈도우 크기 : " + winWidth + 'x' + winHeight);
+					
+					// 크기에 따라 배경색 변경 : 변수에 색상 값 저장
+					var bgColor;
+					if(winWidth>=900) bgColor="green";
+					else if (winWidth>=700) bgColor="yellow";
+					else bgColor="red";
+					
+					// 변수에 저장된 값에 따라 문서 배경색 변경
+					$('body').css('background', bgColor)
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<h3>윈도우 크기 : 윈도우 크기를 변경해보세요.</h3>
+	</body>
+</html>

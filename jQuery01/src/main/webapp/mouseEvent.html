@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#btn').on('click', function() {
+					alert("클릭했습니다.");
+				});
+				
+				// 2개의 이벤트 처리 - 방법 1
+/* 				$('#btn')
+					.on('mouseover', function() {
+						$(this).css('background', 'yellow');
+						})
+					.on('mouseout', function() {
+						$(this).css('background', '');
+						})
+			}); */
+			
+				// 2개의 이벤트 처리 - 방법 2
+				$('#btn').on({
+					mouseover:function() {
+						$(this).css('background', 'pink');
+						},
+					mouseout:function() {
+						$(this).css('background', 'skyblue');
+						}
+				});
+				});
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="클릭하세요">
+	</body>
+</html>
