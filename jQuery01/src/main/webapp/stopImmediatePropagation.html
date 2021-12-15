@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery stopImmediatePropagation()</title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// 현재 3개의 이벤트 리스너 수행
+				$('#btn').on('click', function(e) {
+					// click1 이벤트만 수행되게 하고
+					// 다른 리스너 중지 및 상위로 전파되는 것 중지 (현재 예제에서는 상위 요소 없음)
+					e.stopImmediatePropagation();
+					alert("click1");
+				});
+				
+				$('#btn').on('click', function() {
+					alert("click2");
+				});
+				
+				$('#btn').on('click', function() {
+					alert("click3");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="btn">클릭</button>
+	</body>
+</html>

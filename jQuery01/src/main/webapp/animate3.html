@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>animate() 효과</title>
+        <style type="text/css">	
+			div {
+				width: 50px; height: 50px;
+				background-color: rgb(0, 176, 240);
+				position: relative;
+        	}
+			#box2 { top:100px; }		
+		</style>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#box1').animate({left:'+=100'}, 1000)
+						  .animate({width:'+=100'}, 2000)
+						  .animate({height:'+=100'}, 2000);
+				
+				$('#box2').animate({left:'+=100'}, 1000)
+				  .animate({width:'+=100'}, 2000)
+				  .animate({height:'+=100'}, 2000,
+						  function() {
+					  $(this).css('transform', 'rotate(30deg)');
+				  });
+				
+				// 6초 후에 함수 실행
+				setTimeout(function() {
+					$('div').clearQueue();
+					$('div').hide();
+				}, 6000);
+     		});
+		</script>
+    </head>        
+     <body>    
+        <div id="box1"></div>
+        <div id="box2"></div>
+    </body>
+</html>

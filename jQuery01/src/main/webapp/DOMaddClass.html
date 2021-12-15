@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>클래스 속성 추가/해제</title>
+        <style type="text/css">        	
+			* { text-align:center; }
+			.h1Css {
+				background-color:gold;
+				color:blue;
+			}
+			.imgCss { 
+				opacity:0.5; 
+				box-shadow: 5px 5px 10px 1px #777777;
+				/* x-position y-position blur color */
+			}
+			.hidden{ visibility:hidden; }
+		</style>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {			
+				$('img')
+				.on('mouseover', function() {
+					$(this).addClass('imgCss');
+					$('h1').text("여러 CSS 효과 동적으로 적용");
+					$('h1').addClass('h1Css');
+				})
+				.on ('mouseout', function() {
+					$(this).removeClass('imgCss'); // .imgCss 클래스 추가
+					$('h1').text("여러 CSS 효과 동적으로 적용");
+					$('h1').removeClass('h1Css'); // .h1Css 클래스 추가
+				});
+				
+				// [toggleClass] 버튼 클릭 시 addClass()와 removeClass() 번갈아 적용
+				$('#toggle').on('click', function() {
+					$('img').toggleClass('hidden') // .hidden 클래스 추가
+				});
+	 	    });
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+	        <h1>이미지에 마우스를 올려보세요.</h1>          
+	        <img src="image/painting.jpg"><br><br>
+	        <button id="toggle">toggleClass</button>
+        </div>
+	</body>
+</html>

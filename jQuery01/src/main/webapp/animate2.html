@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>animate() 효과</title>
+        <style type="text/css">		
+			div {
+				width: 50px; 
+				height: 50px;
+				line-height:50px;
+				text-align:center;
+				background-color: rgb(0, 176, 240);
+				position: relative;
+        	   }		
+		</style>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#startBtn').on('click', function() {
+					$('div').each(function(index) {
+						// index에 따라 0.5초씩 다르게 출발
+						$(this).delay(index*500).animate({left:500}, 'slow');
+					});
+				});
+				
+				$('#backBtn').on('click', function() {
+					$('div').each(function(index) {
+						// index에 따라 0.5초씩 다르게 출발
+						$(this).delay(index*500).animate({left:0}, 'slow');
+					});
+				});
+     		});
+		</script>
+    </head>        
+     <body> 
+     	<button id="startBtn">이동</button>
+        <button id="backBtn">원위치</button><p>
+        <div></div><div></div>
+        <div></div><div></div>
+        <div></div><div></div>
+    </body>
+</html>

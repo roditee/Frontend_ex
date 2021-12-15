@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>append()/prepend()/after()/before()</title>
+        <style type="text/css">		 	
+			#box { width:500px; height: 200px; line-height:200px; 
+			                  border:1px solid #000; }
+			img {vertical-align:middle;}					
+		</style>	
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {		  
+			   var img = "<img src='image/banana.png'>";
+			   
+			   //[prepend] 버튼 클릭했을 때, 선택자 box 내부 요소들 맨 앞에 Img 삽입
+			   $('#prepend').on('click', function() {
+				   $('#box').prepend(img);
+			   });
+			   
+			   //[append] 버튼 클릭했을 때, 선택자 box 내부 요소들 맨 뒤에 img 삽입
+			   $('#append').on('click', function() {
+				   $('#box').append(img);
+			   });
+			 	
+			   //[before] 버튼 클릭했을 때, 선택자 box 앞에 img 삽입 (div 영역 외부에 추가)
+			   $('#before').on('click', function() {
+				   $('#box').before(img);
+			   });
+			   
+			   //[after] 버튼 클릭했을 때, 선택자 box 뒤에 img 삽입 (div 영역 외부에 추가)
+			   $('#after').on('click', function() {
+				   $('#box').after(img);
+			   });
+			   
+			   //[empty] 버튼 클릭했을 때, 선택자 box 안의 요소들 제거
+			   $('#empty').on('click', function() {
+				   $('#box').empty();
+			   });
+			   
+			   //[remove] 버튼 클릭했을 때, <img> 태그 제거
+			   $('#remove').on('click', function() {
+				   // $('#box').remove(); // box 제거
+				   $('img').remove(); // <img> 태그 제거
+			   });
+			   
+			   //[initiate] 버튼 클릭했을 때, 
+			   $('#initiate').on('click', function() {
+				   // 외부에 추가한 img 요소들 지우기
+				   $('img').remove();
+				// <div> 내부 요소 비우고 페이지 첫 실행시 들어있던 요소들 추가
+				   $('#box').empty().append("div 내부 <img src='image/apple.png'>");
+			   });
+			});
+		</script>
+	</head>
+
+    <body>
+        <button id="prepend" >prepend</button> 
+        <button id="append" >append</button> 
+        <button id="before" >before</button> 
+        <button id="after" >after</button> 
+        <button id="empty" >empty</button> 
+        <button id="remove" >remove</button> 
+        <button id=initiate >초기화</button>
+        <p>
+        <div id="box">
+        	div 내부 <img src='image/apple.png'>
+        </div>    
+    </body>
+</html>

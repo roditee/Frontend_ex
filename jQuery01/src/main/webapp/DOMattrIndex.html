@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<style>
+			div {margin:0 auto; width:1300px;}
+			img {width:300px; height:200px;}
+		</style>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			// 1. <img> 태그 선택해서 (객체 변수 생성 생략하고 바로 선택자를 객체로 사용)
+			// (객체 변수 생성 생략 X) : var $img = $('img'); // 직접 배열 객체 생성하는 방법 -> 이 과정을 생략할 수 있다는 뜻
+			// (객체 변수 생성 생략) : 바로 선택자로 each() 메소드 앞에 적어도 됨 : $('img').each()
+			// <img> 4개 : 배열로 객체 생성 (여러 개 이므로 배열로 생성)
+			
+			// 2. 각 이미지에 마우스 올렸다 뗐을 때 처리 : 각각을 처리해야 하므로 each() 사용
+			// each()에는 기본 파라미터 index가 포함되어 있음
+			// 마우스 올렸다 뗐을 때 처리하는 메소드로 hover() 사용
+			$('img').each(function(index) {
+				$(this).hover(
+						function() {
+							$(this).attr('src', 'image/img2-' + (index+1) + '.jpg');
+							},
+						function() {
+							$(this).attr('src', 'image/img1-' + (index+1) + '.jpg');
+							}
+						);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div><img src="image/img1-1.jpg"><img src="image/img1-2.jpg"><img src="image/img1-3.jpg"><img src="image/img1-4.jpg"></div>
+	</body>
+</html>

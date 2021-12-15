@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>animate() 효과</title>
+        <style type="text/css">			
+			div {
+				width: 50px; 
+				height: 50px;
+				line-height:50px;
+				text-align:center;
+				background-color: rgb(0, 176, 240);
+				position: relative;
+				/* position: absolute; */
+        	   }		
+		</style>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('div').hover(
+					function() {
+						$(this).animate({left:500}, 1000);
+					},
+					function() {
+						$(this).animate({left:0}, 4000);
+					}
+				);
+	     	});
+		</script>
+    </head>        
+     <body>    
+        <div>1</div><div>2</div>
+        <div>3</div><div>4</div>
+        <div>5</div><div>6</div> 
+    </body>
+</html>

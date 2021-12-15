@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic 효과</title>   
+         <style type="text/css">
+			#wrap { margin:0 auto;  width:800px; text-align:center; }
+			.menuItem { display:inline-block; margin:20px; }		
+			hr { margin-bottom:20px; }		
+		</style>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {				
+				// [show] 버튼 : 속도 : slow
+				$('#show').on('click', function() {
+					$('img').show('slow');
+				});
+				
+				// [hide] 버튼 : 속도 : fast
+				$('#hide').on('click', () => { // 화살표 함수
+					$('img').hide('fast');
+				});
+				
+				// [toggle1] 버튼 : 속도 : 0.5초
+				$('#toggle1').on('click', () => {
+					$('img').toggle(500);
+				});
+				
+				// [toggle2] 버튼 : 속도 : 3초 : 진행 swing (default; 느리게 시작 - 빠르게 진행 - 느리게 완료)
+				$('#toggle2').on('click', () => {
+					$('img').toggle(3000, 'swing');
+				});
+				
+				// [toggle3] 버튼 : 속도 : 3초 : 진행 linear (일정한 속도로 진행)
+				$('#toggle3').on('click', () => {
+					$('img').toggle(3000, 'linear');
+				});
+		 	});
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+             <h1>Basic 효과 </h1>
+             <div id="menu">
+                 <div class="menuItem"><a href="#" id="show">show</a></div>
+                 <div class="menuItem"><a href="#" id="hide">hide</a></div>
+                 <div class="menuItem"><a href="#" id="toggle1">toggle1 0.5초</a></div>
+                 <div class="menuItem"><a href="#" id="toggle2">toggle2 3초 'swing'</a></div>
+                 <div class="menuItem"><a href="#" id="toggle3">toggle3 3초 'linear'</a></div>	
+             </div>
+             <hr>
+             <img src="image/pink.png">         
+		</div>
+	</body>
+</html>
+

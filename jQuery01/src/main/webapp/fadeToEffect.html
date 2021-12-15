@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>fadeTo 효과</title>   
+        <style type="text/css">
+			ul { list-style:none; }	
+			li { display:inline-block; margin-right:30px; }				
+		</style>   
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// 투명도 0이 되어 안 보여도 영역은 그대로 남아 있음
+				$('#off').on('mouseover', function() {
+					$('img').fadeTo(1000, 0);
+				});
+				
+				$('#on').on('mouseover', function() {
+					$('img').fadeTo(1000, 1);
+				});
+				
+				$('#50').on('mouseover', function() {
+					$('img').fadeTo(1000, 0.5);
+				});
+			});
+		</script>     
+	</head>    
+	<body>
+		<center>
+            <h1>fadeTo() 효과 </h1>
+            <ul>
+                <li><a href="#" id="off">opacity : 0</a></li>
+                <li><a href="#" id="on">opacity : 1</a></li>
+                <li><a href="#" id="50">opacity : 0.5</a></li>
+            </ul>          
+            <hr>
+            <img src="image/TakashiAkasaka.jpg"> 
+            <h3>난 어디에 놓일까?</h3>
+        </center>
+	</body>
+</html>
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<style>
+			canvas {background:yellow;}
+		</style>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var canvas = document.getElementById('rectCanvas');
+				var context = canvas.getContext('2d');
+				
+				$('#drawBtn').on('click', () => {
+					// 색상 지정
+					context.fillStyle = "green";
+					
+					// 테두리만 있는 사각형 그리기
+					context.strokeRect(10, 10, 250, 250); // x, y, width, height
+					
+					// 색이 채워진 사각형 그리기
+					context.fillRect(280, 10, 250, 250); // x, y, width, height
+					
+					// 색상 변경
+					context.fillStyle = "pink";
+					context.fillRect(550, 10, 250, 250); // x, y, width, height
+					
+					// 특정 영역 지우기
+					context.clearRect(300, 50, 100, 100);
+				});
+					
+					// 캔버스 지우기 버튼
+					$('#clearCanvas').on('click', () => {
+						// 캔버스 전체 영역 지우기
+						context.clearRect(0, 0, 800, 600); // 캔버스 크기 800*600
+					});
+					
+					
+					$('#drawImage').on('click', () => {
+						// 이미지 출력
+						var image = new Image();
+						image.src="image/apple.png";
+						image.onload = function() {
+							context.drawImage(image, canvas.width/2-image.width/2, canvas.height/2-image.height/2, image.width, image.height);
+						};
+					});
+				});
+			
+		</script>
+	</head>
+	<body>
+		<button id="drawBtn">사각형 그리기</button>
+		<button id="clearCanvas">캔버스 지우기</button>
+		<button id="drawImage">이미지 출력</button>
+		<canvas id="rectCanvas" width="800" height="600"></canvas>
+	</body>
+</html>
