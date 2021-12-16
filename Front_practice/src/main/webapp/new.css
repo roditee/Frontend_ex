@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 #wrap {
-	width:1280px;
+	width:100%;
 	background-color:#eeeeee;
 	text-align:center;
 	position:relative;
@@ -9,24 +9,26 @@
 
 ul {
 	margin-top:0;
-	padding-top:10px;
-	padding-left:0;
+	padding:0;
 	list-style:none;
 }
 
 #mainMenuBox {
+	margin:0;
+	width:100%;
 	background-color:#dcf6dc;  /* white*/
 	z-index:10;  /* 스크롤 시 위 오도록 */
 }
 
-#mainMenuBox ul{ margin:0; height:40px; }
+#mainMenuBox ul{ margin:0; height:60px; }
 
 #menuItem li {
 	float:right;
 	text-align:center;
 	width:130px;
-	height:30px;
-	line-height:30px;
+	height:60px;
+	line-height:60px;
+	font-size: 23px;
 }
 
 #menuItem li:first-child {float:left;}

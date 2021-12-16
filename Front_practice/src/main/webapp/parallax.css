@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+* {margin:0;}
+
+.section > div {margin:0; width:2000px; height:1200px;}
+
+#sect1 {background:red;}
+#sect2 {background:gold;}
+#sect3 {background:gray;}
