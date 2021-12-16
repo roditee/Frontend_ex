@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/* common.css */
+/* 모든 페이지에 공통 적용 */
+
+* {margin:0 auto;}
+
+/* 모든 컨텐츠를 포함하는  box */
+#wrap {
+	width:1280px;
+	background-color:#eeeeee;
+	text-align:center;
+	position:relative;
+}
+
+/* 모든 <img> 테그 테두리 없음 */
+img { border:0; margin:0;}
+
+#footerBox div{
+	background-color:#777777;
+	border:solid 1px #999999;
+	margin-top:10px;
+	padding:20px;
+	margin:0;
+}
+
+#moveToTop:hover { opacity:0.7; cursor:pointer;}

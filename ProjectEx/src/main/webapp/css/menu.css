@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/* menu.css */
+
+/* 모든 <ul> 태그에 적용 */
+ul {
+	margin-top:0;
+	padding:0;
+	list-style:none;   /* type 없음 */
+}
+
+/********** TOP MENU ************/
+
+#topMenuBox {
+	float:right;
+	font-weight:bold;
+	padding-right:10px;
+}
+
+/********** MAIN MENU ************/
+
+#mainMenuBox {
+	width:1280px;
+	height:35px;
+	line-height:35px;
+	background-color:#ffffff;   /* white*/
+	z-index:10;  /* 스크롤 시 위 오도록 */
+	border-top:solid #cccccc 1px;
+	border-bottom:solid #cccccc 1px;
+}
+
+#mainMenuBox ul{ margin:0;}
+
+#mainMenuBox li {
+	float:left;
+	text-align:center;
+	width:16%;
+	height:30px;
+	line-height:30px;
+}
+
+#mainMenuBox li:first-child{   /* 첫 번째 메뉴 항목 */
+	width:19%;   /* 20% 크기지만 border 때문에 19% */
+	border:solid 3px black;
+}
+
+#mainMenuBox ul li a {
+	text-decoration:none;
+	color:black;
+	font-size:14px;   /* pt 도 됨 */
+	font-weight:bold;
+}
+
+#mainMenuBox ul li a:hover {
+	color:red;
+}
+
+
+/********** SUB MENU ************/
+
+#subMenuBox {
+	width:1280px;
+	height:160px;
+	background-color:#ffffff;   /* white*/
+	text-align:center;
+	z-index:20;  /* 스크롤 시 위로 오도록 */
+	padding-bottom:0;
+	position:absolute;
+	visibility:hidden; /* 시작 시 SUB MENU 항목 숨김 */
+}
+
+.subMenuItem {
+	width:15%;
+	background-color:#ffffff;  
+	border-left:solid #cccccc 1px;
+	border-right:solid #cccccc 1px;
+	margin-top:10px;
+}
+
+#subMenuItem1 {
+	position:absolute;
+	margin-left:5%;
+}
+
+#subMenuItem2 {
+	position:absolute;
+	margin-left:20%;
+}
+
+#subMenuItem3 {
+	position:absolute;
+	margin-left:35%;
+}
+
+#subMenuItem4 {
+	position:absolute;
+	margin-left:50%;
+}
+
+#subMenuItem5 {
+	position:absolute;
+	margin-left:65%;
+}
+
+#subMenuItem6 {
+	position:absolute;
+	margin-left:80%;
+}
+
+.subMenuItem ul {background-color:#ffffff;  }
+
+.subMenuItem ul li {height:35px; line-height:35px;}
+
+.subMenuItem ul li a {
+	display:inline-block;
+	color:#333333;
+	text-decoration:none;;
+}
+
+.subMenuItem ul li a:hover {
+	background-color:#ffffff; 
+	text-decoration:underline;
+	color:black;
+}
+
+/********** BOTTOM MENU ************/
+
+#bottomMenuBox {
+	height:30px;
+	line-height:30px;
+}
+
+#bottomMenuBox li {
+	display:inline-block;
+	text-align:center;
+	padding:5px;
+}
+
+#bottomMenuBox li a {
+	color:white;
+	font-weight:bold;
+	text-decoration:none;
+}
+
