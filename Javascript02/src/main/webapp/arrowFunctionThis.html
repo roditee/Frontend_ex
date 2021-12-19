@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery </title>
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			function Animal() {
+				this.name = '강아지';
+				return {
+					name:'고양이',
+					/* show:function() {
+						console.log(this.name); // '고양이' 출력 (현재 객체를 가리킴)
+					} */
+					
+					show:() => {
+						console.log(this.name); // '강아지' 출력 (외부에서 사용되는 인스턴스를 가리킴)
+					}
+				}
+			}
+			
+			const ani = new Animal();
+			ani.show();
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

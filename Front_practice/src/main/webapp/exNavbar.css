@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+}
+
+.navbar {
+  background-color: rgb(70, 70, 116);
+  display: flex;
+  justify-content: space-between;
+  /* items 수직 가운데 정렬 */
+  align-items: center;
+  padding: 8px 12px;
+}
+
+.nav_mainMenu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav_mainMenu li {
+  padding: 8px 12px;
+}
+
+.nav_mainMenu li:hover {
+  background-color: sandybrown;
+  border-radius: 4px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar_logo {
+  font-size: 24px;
+  color: white;
+}
+
+.navbar_logo i {
+  color: white;
+}
+
+.socialIcons {
+  list-style: none;
+  color: white;
+  display: flex;
+  padding-left: 0;
+}
+
+.socialIcons li {
+  padding: 8px 12px;
+}
+
+.navToggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: sandybrown;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .nav_mainMenu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav_mainMenu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .socialIcons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navToggleBtn {
+    display: block;
+  }
+
+  .nav_mainMenu.active,
+  .socialIcons.active {
+    display: flex;
+  }
+}
